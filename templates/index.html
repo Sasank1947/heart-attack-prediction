@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{url_for('static',filename='styles/style.css') }}">
+    <title>Heart Attack Predictor</title>
+</head>
+<body>
+    <div class="box">
+        <div class="form_1">
+            <h1>Heart Attack Predictor</h1>
+            <form method="post" action="/predict" class="main_form">
+                <div class="inputBox">
+                    <input type="text" name="age" required="required">
+                    <span>Age</span>
+                    <i></i>
+                </div><br>
+                <div class="inputSelect">
+                    <p style="color:#8f8f8f">Gender</p>
+                    <select name="sex" required="required">
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                    </select>
+                </div><br>
+
+                <div class="inputSelect">
+                    <p style="color:#8f8f8f;position: relative">Chest Pain Type</p>
+                    <select name="cp" required="required">
+                        <option value="1">Typical Angina</option>
+                        <option value="2">Atypical Angina</option>
+                        <option value="3">Non-Anginal Pain</option>
+                        <option value="4">Asymptomatic</option>
+                    </select>
+                </div><br>
+
+                <div class="inputBox">
+                    <input type="text" name="thalach" required="required">
+                    <span>Maximum Heart Rate Achieved</span>
+                    <i></i>
+                </div><br>
+
+                <div class="inputSelect">
+                    <p style="color:#8f8f8f;position: relative">Exercise Induced Angina</p>
+                    <select name="exang" required="required">
+                        <option value="1">Yes</option>
+                        <option value="0">No</option>
+                    </select>
+                </div><br>
+
+                <div class="inputSelect">
+                    <p style="color:#8f8f8f;position: relative">Slope of the peak exercise ST segment</p>
+                    <select name="slope" required="required">
+                        <option value="2">Up Sloping</option>
+                        <option value="1">Flat</option>
+                        <option value="0">Down Sloping</option>
+                    </select>
+                    
+                </div><br>
+
+                <div class="inputSelect">
+                    <p style="color:#8f8f8f;position: relative">Number of Major vessels colored by Fluoroscopy</p>
+                    <select name="ca" required="required">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </div><br>
+
+                <div class="inputSelect">
+                    <p style="color:#8f8f8f;position: relative">Thallium Stress Test</p>
+                    <select name="thal" required="required">
+                        <option value="2">Normal</option>
+                        <option value="1">Fixed Defect</option>
+                        <option value="3">Reversible Defect</option>
+                    </select>
+                </div>  <br>
+
+                <div class="inputBox">
+                    <input type="text" name="trtbps" required="required">
+                    <span>Resting Blood Pressure(in mm Hg)</span>
+                    <i></i>
+                </div><br>
+
+                <div class="inputBox">
+                    <input type="text" name="oldpeak" required="required">
+                    <span>ST depression induced by exercise relative to rest</span>
+                    <i></i>
+                </div>
+                
+                <span class="but">
+                    <input type="submit" class="sub">
+                </span>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
