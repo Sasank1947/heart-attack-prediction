@@ -3,4 +3,4 @@ tensorflow==2.11.0
 Flask==1.1.2
 scikit-learn==1.2.0
 numpy==1.21.5
-Tk==8.6.10
+Tk==0.1.0
